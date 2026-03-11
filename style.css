@@ -195,10 +195,51 @@ nav.scrolled .logo-text {
     left: 0;
     width: 100%;
     padding: 30px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
     color: var(--white);
     transform: translateY(100%);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-price {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .item-price {
+    transform: scale(1.1);
+}
+
+.order-item-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-top: 5px;
+    transition: var(--transition);
+}
+
+.order-item-link:hover {
+    background-color: var(--white);
+    color: var(--primary);
 }
 
 .gallery-item:hover {
