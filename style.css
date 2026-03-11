@@ -1,0 +1,282 @@
+/* CSS Reset and Variables */
+:root {
+    --primary: #5D4037; /* Rosy Brown / Chocolate */
+    --accent: #D4AF37;  /* Gold */
+    --bg-warm: #FFF9F5; /* Cream */
+    --text-main: #2D1B15;
+    --text-light: #6D4C41;
+    --white: #FFFFFF;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-warm);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+/* Base Styles */
+section {
+    padding: 100px 5%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation Placeholder (Transparent overlay) */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+nav.scrolled {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 15px 5%;
+    box-shadow: var(--shadow);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 800;
+    transition: var(--transition);
+}
+
+nav.scrolled .logo-text {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--white);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.hero-content h1 {
+    font-size: 5.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.4);
+    animation: fadeInDown 1.2s var(--transition);
+}
+
+.hero-content p {
+    animation: fadeInUp 1.2s var(--transition) 0.2s both;
+}
+
+.hero-content .cta-button {
+    animation: fadeInUp 1.2s var(--transition) 0.4s both;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 18px 45px;
+    background-color: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: var(--white);
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item:hover .gallery-info {
+    transform: translateY(0);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Guarantee Section */
+.guarantees {
+    background: var(--white);
+}
+
+.guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    text-align: center;
+}
+
+.guarantee-card {
+    padding: 50px 40px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.guarantee-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.guarantee-card i {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.testimonial-card {
+    max-width: 800px;
+    margin: 50px auto;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background: var(--text-main);
+    color: var(--bg-warm);
+    padding: 80px 5% 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 3rem; }
+    .guarantee-grid, .footer-grid { grid-template-columns: 1fr; }
+    .logo-text { display: none; }
+}
