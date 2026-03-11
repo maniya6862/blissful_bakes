@@ -35,11 +35,13 @@
 
     <header class="hero">
         <div class="hero-bg">
-            <img src="assets/hero-cake.png" alt="A delicious cake being sliced">
+            <video autoplay muted loop playsinline id="hero-video">
+                <source src="assets/hero-video.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="hero-content container">
             <h1>Homemade with Love.</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <p style="font-size: 1.2rem; margin-bottom: 300px; max-width: 600px; margin-left: auto; margin-right: auto;">
                 Experience the magic of artisanal baking. Every slice tells a story of passion and the finest organic
                 ingredients.
             </p>
@@ -51,62 +53,52 @@
         <h2 style="text-align: center; font-size: 3rem; margin-bottom: 50px;">Freshly Baked</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="assets/gallery-1.png" alt="Red Velvet Cake">
+                <img src="assets/user-photo-1.jpg" alt="Custom Anniversary Cake">
+                <span class="item-price">Rs. 1500</span>
+                <div class="gallery-info">
+                    <h3>Custom Celebration Cake</h3>
+                    <p>Artisanal chocolate layers with personalized designs.</p>
+                    <a href="https://wa.me/917508806678?text=I'd like to order the Custom Celebration Cake"
+                        class="order-item-link">Order This</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/user-photo-4.jpg" alt="Blue Birthday Cake">
+                <span class="item-price">Rs. 1800</span>
+                <div class="gallery-info">
+                    <h3>Gourmet Birthday Cake</h3>
+                    <p>Elegant blue frosting with gold accents and spheres.</p>
+                    <a href="https://wa.me/917508806678?text=I'd like to order the Gourmet Birthday Cake"
+                        class="order-item-link">Order This</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/user-photo-3.jpg" alt="Pink Butterfly Cake">
+                <span class="item-price">Rs. 1800</span>
+                <div class="gallery-info">
+                    <h3>Whimsical Theme Cake</h3>
+                    <p>Delicate pink texture adorned with vibrant butterflies.</p>
+                    <a href="https://wa.me/917508806678?text=I'd like to order the Whimsical Theme Cake"
+                        class="order-item-link">Order This</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/user-photo-5.jpg" alt="Assorted Donuts">
+                <span class="item-price">Rs. 450 (Box)</span>
+                <div class="gallery-info">
+                    <h3>Signature Donuts</h3>
+                    <p>Freshly glazed with colorful sprinkles and fillings.</p>
+                    <a href="https://wa.me/917508806678?text=I'd like to order the Signature Donuts"
+                        class="order-item-link">Order This</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/user-photo-2.jpg" alt="Premium Bake">
                 <span class="item-price">Rs. 1200</span>
                 <div class="gallery-info">
-                    <h3>Classic Red Velvet</h3>
-                    <p>Velvety sponge with rich cream cheese frosting.</p>
-                    <a href="https://wa.me/917508806678?text=I'd like to order the Classic Red Velvet Cake"
-                        class="order-item-link">Order This</a>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/gallery-2.png" alt="Chocolate Truffle Cake">
-                <span class="item-price">Rs. 1400</span>
-                <div class="gallery-info">
-                    <h3>Dark Chocolate Truffle</h3>
-                    <p>Decadent ganache and moist cocoa layers.</p>
-                    <a href="https://wa.me/917508806678?text=I'd like to order the Dark Chocolate Truffle Cake"
-                        class="order-item-link">Order This</a>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/gallery-3.png" alt="Assorted Cupcakes">
-                <span class="item-price">Rs. 120/pc</span>
-                <div class="gallery-info">
-                    <h3>Signature Cupcakes</h3>
-                    <p>A burst of flavors in every bite.</p>
-                    <a href="https://wa.me/917508806678?text=I'd like to order the Signature Cupcakes"
-                        class="order-item-link">Order This</a>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/gallery-4.png" alt="Berry Cheesecake">
-                <span class="item-price">Rs. 1600</span>
-                <div class="gallery-info">
-                    <h3>Berry Bliss Cheesecake</h3>
-                    <p>Creamy New York style with fresh berries.</p>
-                    <a href="https://wa.me/917508806678?text=I'd like to order the Berry Bliss Cheesecake"
-                        class="order-item-link">Order This</a>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/gallery-5.png" alt="Pastel Macarons">
-                <span class="item-price">Rs. 90/pc</span>
-                <div class="gallery-info">
-                    <h3>French Macarons</h3>
-                    <p>Delicate shells with gourmet fillings.</p>
-                    <a href="https://wa.me/917508806678?text=I'd like to order the French Macarons"
-                        class="order-item-link">Order This</a>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/gallery-6.png" alt="Sourdough Bread">
-                <span class="item-price">Rs. 350</span>
-                <div class="gallery-info">
-                    <h3>Artisan Sourdough</h3>
-                    <p>Crispy crust, airy center, baked fresh.</p>
-                    <a href="https://wa.me/917508806678?text=I'd like to order the Artisan Sourdough Bread"
+                    <h3>Artisanal Bake</h3>
+                    <p>Handcrafted with the finest ingredients and love.</p>
+                    <a href="https://wa.me/917508806678?text=I'd like to order the Artisanal Bake"
                         class="order-item-link">Order This</a>
                 </div>
             </div>
